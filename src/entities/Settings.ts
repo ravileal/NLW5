@@ -1,8 +1,8 @@
-import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryColumn } from "typeorm"
+import { Entity, Column, UpdateDateColumn, CreateDateColumn, PrimaryColumn } from "typeorm"
 import { v4 as uuid } from "uuid"
 
 @Entity("settings")
-class Settings{
+class Settings {
 
   @PrimaryColumn()
   id: string;
@@ -16,7 +16,7 @@ class Settings{
   @UpdateDateColumn()
   updated_at: Date;
 
-  @UpdateDateColumn()
+  @CreateDateColumn()
   created_at: Date;
 
   constructor(){
